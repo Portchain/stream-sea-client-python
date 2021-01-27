@@ -30,6 +30,7 @@ Write a schema definition for a stream
 - `client_secret: str` - The client secret used to authenticate the client
 - `stream: str` - The name of the stream
 - `schema: SchemaDefinition` - Schema definition
+
 If a schema definition with the same name and version number already exists, the existing definition will not be overwritten.
 
 #### get_schema_versions_vector(*, remote_host, remote_port, secure, client_id, client_secret, streams)
@@ -40,6 +41,7 @@ Read the version numbers for multiple streams
 - `client_id: str` - The client ID
 - `client_secret: str` - The client secret used to authenticate the client
 - `streams: [str]` - The names of the streams
+
 This function will return an array `ret_val` with the same length as `streams`. For every `i`, if the stream with name `streams[i]` exists, then the value of `ret_val[i]` will be that stream's version number. If the stream with name `streams[i]` does not exist, then the value of `ret_val[i]` will be `None`.
 
 #### SchemaDefinition
